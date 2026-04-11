@@ -1,0 +1,96 @@
+@import "tailwindcss";
+
+@theme {
+  --color-accent: #e8a020;
+  --color-green: #3a6b35;
+  --color-green-dark: #2d5229;
+  --color-surface: #f8f8f8;
+  --color-ink: #1a1a1a;
+  --color-body-text: #444444;
+  --color-muted: #888888;
+  --color-border: #eeeeee;
+  --color-divider: #e5e5e5;
+  --color-form-border: #dddddd;
+  --shadow-card: 0 2px 8px rgba(0, 0, 0, 0.06);
+  --shadow-card-hover: 0 8px 24px rgba(0, 0, 0, 0.12);
+  --font-body: var(--font-poppins);
+  --font-heading: var(--font-oswald);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: auto;
+}
+
+body {
+  background-color: #ffffff;
+  color: #444444;
+  font-family: var(--font-body), sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+@layer base {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-heading), sans-serif;
+    letter-spacing: 0.02em;
+    color: #1a1a1a;
+  }
+}
+
+/* ─── Fade-in-up (Intersection Observer) ─── */
+.fade-up {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.fade-up.animate-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ─── Card hover lift ─── */
+.card-hover {
+  transition: transform 200ms ease, box-shadow 200ms ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-card-hover);
+}
+
+/* ─── Nav link underline slide-in ─── */
+.nav-underline {
+  position: relative;
+}
+
+.nav-underline::after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #3a6b35;
+  transition: width 200ms ease;
+}
+
+.nav-underline:hover::after,
+.nav-underline.nav-active::after {
+  width: 100%;
+}
+
+/* ─── Button hover ─── */
+.btn-primary {
+  transition: background-color 200ms ease, color 200ms ease;
+}
