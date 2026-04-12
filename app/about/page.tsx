@@ -61,9 +61,9 @@ export default function AboutPage() {
   return (
     <>
       {/* Page header */}
-      <section className="bg-surface border-b border-border px-4 py-10 md:py-14">
-        <div className="mx-auto max-w-5xl">
-          <p className="font-body text-xs tracking-widest text-muted uppercase mb-2">
+      <section className="bg-surface border-b border-[#e5e5e5] px-6 py-10 md:py-14">
+        <div className="mx-auto max-w-6xl">
+          <p className="font-body text-xs font-semibold tracking-widest text-[#3a6b35] uppercase mb-2">
             Our Story
           </p>
           <h1 className="font-heading text-3xl md:text-5xl font-bold uppercase tracking-wide">
@@ -72,18 +72,21 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <div className="mx-auto max-w-5xl px-4 py-16 space-y-16">
-        {/* School history */}
-        <section aria-label="School history">
+      {/* School history */}
+      <section className="bg-white border-b border-[#e5e5e5] px-6 py-12 md:py-20" aria-label="School history">
+        <div className="mx-auto max-w-6xl">
           <FadeIn>
-            <h2 className="font-heading text-2xl md:text-3xl uppercase tracking-wide mb-6 text-center">
+            <p className="font-body text-xs font-semibold tracking-widest text-[#3a6b35] uppercase mb-3 text-center">
+              Since 2000
+            </p>
+            <h2 className="font-heading text-2xl md:text-3xl uppercase tracking-wide mb-8 text-center">
               25+ Years of Excellence
             </h2>
           </FadeIn>
           <FadeIn delay={80}>
             <div
               className="rounded-md bg-white border border-border p-6 md:p-8 max-w-3xl mx-auto"
-              style={{ boxShadow: "0 2px 8px rgba(0,0,0,0.06)" }}
+              style={{ borderTop: "3px solid #3a6b35", boxShadow: "0 2px 8px rgba(0,0,0,0.06)" }}
             >
               <p className="font-body text-body-text leading-relaxed mb-4">
                 Samrat Motor Driving School was established in 2000 with a single
@@ -105,23 +108,26 @@ export default function AboutPage() {
               </p>
             </div>
           </FadeIn>
-        </section>
+        </div>
+      </section>
 
-        <hr className="border-[#e8a020]/30" />
-
-        {/* Why choose us */}
-        <section aria-label="Why choose Samrat">
+      {/* Why choose us */}
+      <section className="bg-surface border-b border-[#e5e5e5] px-6 py-12 md:py-20" aria-label="Why choose Samrat">
+        <div className="mx-auto max-w-6xl">
           <FadeIn>
-            <h2 className="font-heading text-2xl md:text-3xl uppercase tracking-wide mb-6 text-center">
+            <p className="font-body text-xs font-semibold tracking-widest text-[#3a6b35] uppercase mb-3 text-center">
+              Our Strengths
+            </p>
+            <h2 className="font-heading text-2xl md:text-3xl uppercase tracking-wide mb-8 text-center">
               Why Choose Us
             </h2>
           </FadeIn>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {whyChooseUs.map((item, i) => (
               <FadeIn key={item.title} delay={i * 70}>
                 <article
                   className="rounded-md bg-white border border-border p-5 card-hover h-full"
-                  style={{ boxShadow: "0 2px 8px rgba(0,0,0,0.06)" }}
+                  style={{ borderTop: "3px solid #3a6b35", boxShadow: "0 2px 8px rgba(0,0,0,0.06)" }}
                 >
                   <h3 className="font-heading text-base uppercase tracking-wide mb-2">
                     {item.title}
@@ -133,14 +139,17 @@ export default function AboutPage() {
               </FadeIn>
             ))}
           </div>
-        </section>
+        </div>
+      </section>
 
-        <hr className="border-[#e8a020]/30" />
-
-        {/* Services */}
-        <section aria-label="Services offered">
+      {/* Services */}
+      <section className="bg-white border-b border-[#e5e5e5] px-6 py-12 md:py-20" aria-label="Services offered">
+        <div className="mx-auto max-w-6xl">
           <FadeIn>
-            <h2 className="font-heading text-2xl md:text-3xl uppercase tracking-wide mb-6 text-center">
+            <p className="font-body text-xs font-semibold tracking-widest text-[#3a6b35] uppercase mb-3 text-center">
+              Beyond Training
+            </p>
+            <h2 className="font-heading text-2xl md:text-3xl uppercase tracking-wide mb-8 text-center">
               Services We Offer
             </h2>
           </FadeIn>
@@ -149,7 +158,7 @@ export default function AboutPage() {
               <FadeIn key={service} delay={i * 60}>
                 <div
                   className="rounded-md bg-white border border-border px-5 py-4 flex items-center gap-3 card-hover"
-                  style={{ boxShadow: "0 2px 8px rgba(0,0,0,0.06)" }}
+                  style={{ borderTop: "3px solid #3a6b35", boxShadow: "0 2px 8px rgba(0,0,0,0.06)" }}
                 >
                   <span className="h-2 w-2 rounded-sm bg-accent shrink-0" aria-hidden="true" />
                   <span className="font-body text-sm text-ink font-medium">{service}</span>
@@ -157,14 +166,17 @@ export default function AboutPage() {
               </FadeIn>
             ))}
           </div>
-        </section>
+        </div>
+      </section>
 
-        <hr className="border-[#e8a020]/30" />
-
-        {/* Media grid */}
-        <section aria-label="Photo and video gallery">
+      {/* Media grid */}
+      <section className="bg-surface border-b border-[#e5e5e5] px-6 py-12 md:py-20" aria-label="Photo and video gallery">
+        <div className="mx-auto max-w-6xl">
           <FadeIn>
-            <h2 className="font-heading text-2xl md:text-3xl uppercase tracking-wide mb-6 text-center">
+            <p className="font-body text-xs font-semibold tracking-widest text-[#3a6b35] uppercase mb-3 text-center">
+              See Us In Action
+            </p>
+            <h2 className="font-heading text-2xl md:text-3xl uppercase tracking-wide mb-8 text-center">
               Gallery
             </h2>
           </FadeIn>
@@ -179,11 +191,11 @@ export default function AboutPage() {
               </FadeIn>
             ))}
           </div>
-        </section>
-      </div>
+        </div>
+      </section>
 
       {/* Testimonials */}
-      <section className="py-16 bg-surface border-y border-border">
+      <section className="bg-white py-12 md:py-20">
         <Testimonials />
       </section>
     </>

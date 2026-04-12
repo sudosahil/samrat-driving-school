@@ -49,9 +49,9 @@ export default function HowItWorksPage() {
   return (
     <>
       {/* Page header */}
-      <section className="bg-surface border-b border-border px-4 py-10 md:py-14">
-        <div className="mx-auto max-w-5xl">
-          <p className="font-body text-xs tracking-widest text-muted uppercase mb-2">
+      <section className="bg-surface border-b border-[#e5e5e5] px-6 py-10 md:py-14">
+        <div className="mx-auto max-w-6xl">
+          <p className="font-body text-xs font-semibold tracking-widest text-[#3a6b35] uppercase mb-2">
             The Process
           </p>
           <h1 className="font-heading text-3xl md:text-5xl font-bold uppercase tracking-wide">
@@ -60,80 +60,89 @@ export default function HowItWorksPage() {
         </div>
       </section>
 
-      <div className="mx-auto max-w-5xl px-4 py-16">
-        <FadeIn>
-          <p className="font-body text-body-text mb-12 text-center max-w-2xl mx-auto">
-            Getting your driving license with Samrat Motor Driving School is
-            straightforward. Here&rsquo;s exactly what to expect from day one to
-            the day you hold your license.
-          </p>
-        </FadeIn>
-
-        {/* Steps */}
-        <ol className="relative space-y-0" aria-label="Process steps">
-          {steps.map((step, index) => (
-            <FadeIn key={step.number} delay={index * 100}>
-              <li className="flex gap-5 md:gap-8">
-                {/* Number column */}
-                <div className="flex flex-col items-center">
-                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-md bg-ink">
-                    <span className="font-heading text-base font-bold text-white">
-                      {step.number}
-                    </span>
-                  </div>
-                  {index < steps.length - 1 && (
-                    <div
-                      className="mt-2 w-0.5 flex-1 min-h-[40px] bg-border"
-                      aria-hidden="true"
-                    />
-                  )}
-                </div>
-
-                {/* Content */}
-                <div className={`${index < steps.length - 1 ? "pb-10" : "pb-0"}`}>
-                  <h2 className="font-heading text-xl md:text-2xl uppercase tracking-wide mb-2">
-                    {step.title}
-                  </h2>
-                  <p className="font-body text-sm md:text-base text-body-text leading-relaxed">
-                    {step.description}
-                  </p>
-                </div>
-              </li>
-            </FadeIn>
-          ))}
-        </ol>
-
-        {/* CTA */}
-        <FadeIn delay={200}>
-          <div
-            className="mt-12 rounded-md bg-white border border-border p-6 text-center"
-            style={{ boxShadow: "0 2px 8px rgba(0,0,0,0.06)" }}
-          >
-            <h2 className="font-heading text-xl uppercase tracking-wide mb-2">
-              Ready to Start?
-            </h2>
-            <p className="font-body text-sm text-body-text mb-5">
-              Enroll today and be on the road within 15 days.
+      {/* Steps */}
+      <section className="bg-white border-b border-[#e5e5e5] px-6 py-12 md:py-20">
+        <div className="mx-auto max-w-6xl">
+          <FadeIn>
+            <p className="font-body text-body-text mb-12 text-center max-w-2xl mx-auto">
+              Getting your driving license with Samrat Motor Driving School is
+              straightforward. Here&rsquo;s exactly what to expect from day one to
+              the day you hold your license.
             </p>
-            <div className="flex flex-col sm:flex-row gap-3 justify-center">
-              <a
-                href={WHATSAPP_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-primary inline-flex items-center justify-center gap-2 rounded-md bg-ink px-6 py-3 font-heading text-sm font-semibold text-white tracking-wide hover:bg-[#333333]"
-              >
-                Enquire on WhatsApp
-              </a>
-              <Link
-                href="/contact"
-                className="btn-primary inline-flex items-center justify-center rounded-md border border-ink px-6 py-3 font-heading text-sm font-semibold text-ink hover:bg-ink hover:text-white tracking-wide transition-colors"
-              >
-                Contact Us
-              </Link>
+          </FadeIn>
+
+          <ol className="relative space-y-0 max-w-3xl mx-auto" aria-label="Process steps">
+            {steps.map((step, index) => (
+              <FadeIn key={step.number} delay={index * 100}>
+                <li className="flex gap-5 md:gap-8">
+                  {/* Number column */}
+                  <div className="flex flex-col items-center">
+                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-md bg-[#3a6b35]">
+                      <span className="font-heading text-base font-bold text-white">
+                        {step.number}
+                      </span>
+                    </div>
+                    {index < steps.length - 1 && (
+                      <div
+                        className="mt-2 w-0.5 flex-1 min-h-[40px] bg-[#3a6b35]/20"
+                        aria-hidden="true"
+                      />
+                    )}
+                  </div>
+
+                  {/* Content */}
+                  <div className={`${index < steps.length - 1 ? "pb-10" : "pb-0"}`}>
+                    <h2 className="font-heading text-xl md:text-2xl uppercase tracking-wide mb-2">
+                      {step.title}
+                    </h2>
+                    <p className="font-body text-sm md:text-base text-body-text leading-relaxed">
+                      {step.description}
+                    </p>
+                  </div>
+                </li>
+              </FadeIn>
+            ))}
+          </ol>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="bg-surface px-6 py-12 md:py-20">
+        <div className="mx-auto max-w-6xl">
+          <FadeIn delay={200}>
+            <div
+              className="rounded-md bg-white border border-border p-8 text-center max-w-2xl mx-auto"
+              style={{ borderTop: "3px solid #3a6b35", boxShadow: "0 2px 8px rgba(0,0,0,0.06)" }}
+            >
+              <p className="font-body text-xs font-semibold tracking-widest text-[#3a6b35] uppercase mb-2">
+                Get Started
+              </p>
+              <h2 className="font-heading text-xl uppercase tracking-wide mb-2">
+                Ready to Start?
+              </h2>
+              <p className="font-body text-sm text-body-text mb-6">
+                Enroll today and be on the road within 15 days.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-3 justify-center">
+                <a
+                  href={WHATSAPP_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-primary inline-flex items-center justify-center gap-2 rounded-md bg-[#3a6b35] px-6 py-3 font-heading text-sm font-semibold text-white tracking-wide hover:bg-[#2d5229]"
+                >
+                  Enquire on WhatsApp
+                </a>
+                <Link
+                  href="/contact"
+                  className="btn-primary inline-flex items-center justify-center rounded-md border border-[#3a6b35] px-6 py-3 font-heading text-sm font-semibold text-[#3a6b35] hover:bg-[#3a6b35] hover:text-white tracking-wide transition-colors"
+                >
+                  Contact Us
+                </Link>
+              </div>
             </div>
-          </div>
-        </FadeIn>
-      </div>
+          </FadeIn>
+        </div>
+      </section>
     </>
   );
 }

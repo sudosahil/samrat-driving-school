@@ -36,9 +36,9 @@ export default function CoursesPage() {
   return (
     <>
       {/* Page header */}
-      <section className="bg-surface border-b border-border px-4 py-10 md:py-14">
-        <div className="mx-auto max-w-5xl">
-          <p className="font-body text-xs tracking-widest text-muted uppercase mb-2">
+      <section className="bg-surface border-b border-[#e5e5e5] px-6 py-10 md:py-14">
+        <div className="mx-auto max-w-6xl">
+          <p className="font-body text-xs font-semibold tracking-widest text-[#3a6b35] uppercase mb-2">
             What We Offer
           </p>
           <h1 className="font-heading text-3xl md:text-5xl font-bold uppercase tracking-wide">
@@ -47,11 +47,14 @@ export default function CoursesPage() {
         </div>
       </section>
 
-      <div className="mx-auto max-w-5xl px-4 py-16 space-y-16">
-        {/* Course card */}
-        <section aria-label="4-Wheeler Car Training course details">
+      {/* Course card */}
+      <section className="bg-white border-b border-[#e5e5e5] px-6 py-12 md:py-20" aria-label="4-Wheeler Car Training course details">
+        <div className="mx-auto max-w-6xl">
           <FadeIn>
-            <h2 className="font-heading text-2xl md:text-3xl uppercase tracking-wide mb-6 text-center">
+            <p className="font-body text-xs font-semibold tracking-widest text-[#3a6b35] uppercase mb-3 text-center">
+              Our Program
+            </p>
+            <h2 className="font-heading text-2xl md:text-3xl uppercase tracking-wide mb-8 text-center">
               4-Wheeler (Car) Training
             </h2>
           </FadeIn>
@@ -59,7 +62,7 @@ export default function CoursesPage() {
           <FadeIn delay={80}>
             <div
               className="rounded-md bg-white border border-border p-6 md:p-8"
-              style={{ boxShadow: "0 2px 8px rgba(0,0,0,0.06)" }}
+              style={{ borderTop: "3px solid #3a6b35", boxShadow: "0 2px 8px rgba(0,0,0,0.06)" }}
             >
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 {/* Course details */}
@@ -101,7 +104,7 @@ export default function CoursesPage() {
                       "RTO license exam paperwork and test preparation included.",
                     ].map((point) => (
                       <li key={point} className="flex items-start gap-2 font-body text-sm text-body-text">
-                        <span className="text-accent mt-0.5 shrink-0 font-bold">→</span>
+                        <span className="text-[#3a6b35] mt-0.5 shrink-0 font-bold">→</span>
                         {point}
                       </li>
                     ))}
@@ -111,7 +114,7 @@ export default function CoursesPage() {
                     href={WHATSAPP_URL}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="btn-primary inline-flex items-center gap-2 rounded-md bg-ink px-6 py-3 font-heading text-sm font-semibold text-white tracking-wide hover:bg-[#333333]"
+                    className="btn-primary inline-flex items-center gap-2 rounded-md bg-[#3a6b35] px-6 py-3 font-heading text-sm font-semibold text-white tracking-wide hover:bg-[#2d5229]"
                   >
                     <WaIcon />
                     Book via WhatsApp
@@ -120,14 +123,17 @@ export default function CoursesPage() {
               </div>
             </div>
           </FadeIn>
-        </section>
+        </div>
+      </section>
 
-        <hr className="border-[#e8a020]/30" />
-
-        {/* Services offered */}
-        <section aria-label="Services offered">
+      {/* Services offered */}
+      <section className="bg-surface px-6 py-12 md:py-20" aria-label="Services offered">
+        <div className="mx-auto max-w-6xl">
           <FadeIn>
-            <h2 className="font-heading text-2xl md:text-3xl uppercase tracking-wide mb-6 text-center">
+            <p className="font-body text-xs font-semibold tracking-widest text-[#3a6b35] uppercase mb-3 text-center">
+              Beyond Training
+            </p>
+            <h2 className="font-heading text-2xl md:text-3xl uppercase tracking-wide mb-8 text-center">
               Services We Offer
             </h2>
           </FadeIn>
@@ -136,7 +142,7 @@ export default function CoursesPage() {
               <FadeIn key={service} delay={i * 60}>
                 <div
                   className="rounded-md bg-white border border-border px-5 py-4 flex items-center gap-3 card-hover"
-                  style={{ boxShadow: "0 2px 8px rgba(0,0,0,0.06)" }}
+                  style={{ borderTop: "3px solid #3a6b35", boxShadow: "0 2px 8px rgba(0,0,0,0.06)" }}
                 >
                   <span className="h-2 w-2 rounded-sm bg-accent shrink-0" aria-hidden="true" />
                   <span className="font-body text-sm text-ink font-medium">{service}</span>
@@ -144,8 +150,8 @@ export default function CoursesPage() {
               </FadeIn>
             ))}
           </div>
-        </section>
-      </div>
+        </div>
+      </section>
     </>
   );
 }

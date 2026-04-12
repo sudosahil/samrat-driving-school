@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 const quickLinks = [
@@ -15,15 +16,13 @@ export default function Footer() {
         <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 md:grid-cols-3">
           {/* Brand */}
           <div>
-            <p className="font-heading text-2xl font-bold text-white tracking-wider">
-              SAMRAT
-            </p>
-            <p className="text-xs font-body text-white/60 mt-0.5">
-              Motor Driving School
-            </p>
-            <p className="font-body text-[#e8a020] text-sm mt-3">
-              &ldquo;The Name of Perfection&rdquo;
-            </p>
+            <Image
+              src="/images/logo.png"
+              alt="Samrat Motor Driving School"
+              width={200}
+              height={56}
+              className="h-12 w-auto object-contain brightness-110"
+            />
             <p className="font-body text-xs text-white/40 mt-4">
               Est. 2000 &bull; Chhatrapati Sambhajinagar
             </p>
