@@ -6,7 +6,7 @@ import FadeIn from "@/components/FadeIn";
 export const metadata: Metadata = {
   title: "About Us — Samrat Motor Driving School Since 2000",
   description:
-    "Samrat Motor Driving School in Chhatrapati Sambhajinagar has been training drivers since 2000. Founded by Vijay Rode and Gayatri Rode. Learn about our experienced team and approach.",
+    "Samrat Motor Driving School in Chhatrapati Sambhajinagar has been training two-wheeler and four-wheeler drivers since 2000. Founded by Vijay Rode and Gayatri Rode. Learn about our experienced team and approach.",
   openGraph: {
     title: "About Samrat Motor Driving School — Aurangabad",
     description: "25+ years of trusted car driving training in Chhatrapati Sambhajinagar. Founded by Vijay Rode.",
@@ -31,12 +31,20 @@ const whyChooseUs = [
     desc: "Our trainers have years of on-road teaching experience and are patient, professional, and communicative.",
   },
   {
-    title: "Flexible Timings",
-    desc: "We're open from 5:00 AM to 9:00 PM, Monday to Saturday. Choose the slot that fits your schedule.",
+    title: "Flexible Batches",
+    desc: "Morning (6 AM–12 PM) and evening (3 PM–8 PM) batches, Monday to Saturday. Choose the slot that fits your schedule.",
+  },
+  {
+    title: "Two & Four Wheeler",
+    desc: "Train for a two-wheeler, a car, or both together with our 2+4 combo — whatever license you need.",
+  },
+  {
+    title: "Taught in Hindi & Marathi",
+    desc: "Lessons are delivered in Hindi and Marathi, so you learn comfortably in the language you understand best.",
   },
   {
     title: "Structured Curriculum",
-    desc: "A clear 15-day, 120 km program with daily goals — so you always know where you stand.",
+    desc: "A clear program with daily goals — including a 15-day, 120 km car course — so you always know where you stand.",
   },
   {
     title: "Patient Teaching Style",
@@ -63,7 +71,7 @@ export default function AboutPage() {
       {/* Page header */}
       <section className="bg-surface border-b border-[#e5e5e5] px-6 py-10 md:py-14">
         <div className="mx-auto max-w-6xl">
-          <p className="font-body text-xs font-semibold tracking-widest text-[#3a6b35] uppercase mb-2">
+          <p className="font-body text-xs font-semibold tracking-widest text-[#0f3d3a] uppercase mb-2">
             Our Story
           </p>
           <h1 className="font-heading text-3xl md:text-5xl font-bold uppercase tracking-wide">
@@ -76,7 +84,7 @@ export default function AboutPage() {
       <section className="bg-white border-b border-[#e5e5e5] px-6 py-12 md:py-20" aria-label="School history">
         <div className="mx-auto max-w-6xl">
           <FadeIn>
-            <p className="font-body text-xs font-semibold tracking-widest text-[#3a6b35] uppercase mb-3 text-center">
+            <p className="font-body text-xs font-semibold tracking-widest text-[#0f3d3a] uppercase mb-3 text-center">
               Since 2000
             </p>
             <h2 className="font-heading text-2xl md:text-3xl uppercase tracking-wide mb-8 text-center">
@@ -86,7 +94,7 @@ export default function AboutPage() {
           <FadeIn delay={80}>
             <div
               className="rounded-md bg-white border border-border p-6 md:p-8 max-w-3xl mx-auto"
-              style={{ borderTop: "3px solid #3a6b35", boxShadow: "0 2px 8px rgba(0,0,0,0.06)" }}
+              style={{ borderTop: "3px solid #0f3d3a", boxShadow: "0 2px 8px rgba(0,0,0,0.06)" }}
             >
               <p className="font-body text-body-text leading-relaxed mb-4">
                 Samrat Motor Driving School was established in 2000 with a single
@@ -115,7 +123,7 @@ export default function AboutPage() {
       <section className="bg-surface border-b border-[#e5e5e5] px-6 py-12 md:py-20" aria-label="Why choose Samrat">
         <div className="mx-auto max-w-6xl">
           <FadeIn>
-            <p className="font-body text-xs font-semibold tracking-widest text-[#3a6b35] uppercase mb-3 text-center">
+            <p className="font-body text-xs font-semibold tracking-widest text-[#0f3d3a] uppercase mb-3 text-center">
               Our Strengths
             </p>
             <h2 className="font-heading text-2xl md:text-3xl uppercase tracking-wide mb-8 text-center">
@@ -127,7 +135,7 @@ export default function AboutPage() {
               <FadeIn key={item.title} delay={i * 70}>
                 <article
                   className="rounded-md bg-white border border-border p-5 card-hover h-full"
-                  style={{ borderTop: "3px solid #3a6b35", boxShadow: "0 2px 8px rgba(0,0,0,0.06)" }}
+                  style={{ borderTop: "3px solid #0f3d3a", boxShadow: "0 2px 8px rgba(0,0,0,0.06)" }}
                 >
                   <h3 className="font-heading text-base uppercase tracking-wide mb-2">
                     {item.title}
@@ -146,7 +154,7 @@ export default function AboutPage() {
       <section className="bg-white border-b border-[#e5e5e5] px-6 py-12 md:py-20" aria-label="Services offered">
         <div className="mx-auto max-w-6xl">
           <FadeIn>
-            <p className="font-body text-xs font-semibold tracking-widest text-[#3a6b35] uppercase mb-3 text-center">
+            <p className="font-body text-xs font-semibold tracking-widest text-[#0f3d3a] uppercase mb-3 text-center">
               Beyond Training
             </p>
             <h2 className="font-heading text-2xl md:text-3xl uppercase tracking-wide mb-8 text-center">
@@ -158,7 +166,7 @@ export default function AboutPage() {
               <FadeIn key={service} delay={i * 60}>
                 <div
                   className="rounded-md bg-white border border-border px-5 py-4 flex items-center gap-3 card-hover"
-                  style={{ borderTop: "3px solid #3a6b35", boxShadow: "0 2px 8px rgba(0,0,0,0.06)" }}
+                  style={{ borderTop: "3px solid #0f3d3a", boxShadow: "0 2px 8px rgba(0,0,0,0.06)" }}
                 >
                   <span className="h-2 w-2 rounded-sm bg-accent shrink-0" aria-hidden="true" />
                   <span className="font-body text-sm text-ink font-medium">{service}</span>
@@ -173,7 +181,7 @@ export default function AboutPage() {
       <section className="bg-surface border-b border-[#e5e5e5] px-6 py-12 md:py-20" aria-label="Photo and video gallery">
         <div className="mx-auto max-w-6xl">
           <FadeIn>
-            <p className="font-body text-xs font-semibold tracking-widest text-[#3a6b35] uppercase mb-3 text-center">
+            <p className="font-body text-xs font-semibold tracking-widest text-[#0f3d3a] uppercase mb-3 text-center">
               See Us In Action
             </p>
             <h2 className="font-heading text-2xl md:text-3xl uppercase tracking-wide mb-8 text-center">

@@ -22,11 +22,11 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://samratdrivingschool.in"),
   title: {
     default:
-      "Samrat Motor Driving School — Car Driving Classes in Chhatrapati Sambhajinagar",
+      "Samrat Motor Driving School — Two & Four Wheeler Driving Classes in Chhatrapati Sambhajinagar",
     template: "%s | Samrat Motor Driving School",
   },
   description:
-    "Learn car driving at Samrat Motor Driving School in Chhatrapati Sambhajinagar (Aurangabad). Trusted since 2000, professional trainers, RTO support. Call: 9422264916.",
+    "Learn two-wheeler & car driving at Samrat Motor Driving School in Chhatrapati Sambhajinagar (Aurangabad). Trusted since 2000, professional trainers, instruction in Hindi/Marathi, RTO support. Call: 9422264916.",
   openGraph: {
     siteName: "Samrat Motor Driving School",
     locale: "en_IN",

@@ -2,12 +2,12 @@ import type { Metadata } from "next";
 import FadeIn from "@/components/FadeIn";
 
 export const metadata: Metadata = {
-  title: "Car Driving Courses — 4-Wheeler Training in Aurangabad",
+  title: "Driving Courses — Two-Wheeler & Four-Wheeler Training in Aurangabad",
   description:
-    "Enroll in Samrat Motor Driving School's 15-day 4-Wheeler car driving course in Chhatrapati Sambhajinagar. 120km on-road training, RTO guidance, flexible timings 5AM–9PM.",
+    "Enroll at Samrat Motor Driving School in Chhatrapati Sambhajinagar. Two-wheeler, four-wheeler, and 2+4 combo courses with RTO guidance. Flexible morning & evening batches, instruction in Hindi/Marathi.",
   openGraph: {
-    title: "Car Driving Courses — Samrat Motor Driving School",
-    description: "15-day car driving course in Aurangabad. 120km on-road training, RTO support, flexible timings.",
+    title: "Driving Courses — Samrat Motor Driving School",
+    description: "Two-wheeler, four-wheeler & combo driving courses in Aurangabad. On-road training, RTO support, flexible batches.",
     type: "website",
     url: "https://samratdrivingschool.in/courses/",
   },
@@ -15,7 +15,53 @@ export const metadata: Metadata = {
 };
 
 const WHATSAPP_URL =
-  "https://wa.me/919422264916?text=Hi%2C%20I%27m%20interested%20in%20joining%20Samrat%20Motor%20Driving%20School";
+  "https://wa.me/917499862746?text=Hi%2C%20I%27m%20interested%20in%20joining%20Samrat%20Motor%20Driving%20School";
+
+const courses = [
+  {
+    title: "2-Wheeler Training",
+    badge: "Bikes & Scooters",
+    details: [
+      ["Vehicles", "Geared & gearless two-wheelers"],
+      ["Course Duration", "On enquiry"],
+      ["Batches", "Morning 6 AM–12 PM · Evening 3 PM–8 PM"],
+      ["Focus", "Balance, road sense & traffic handling"],
+      ["RTO Support", "Exam guidance included"],
+    ],
+  },
+  {
+    title: "4-Wheeler Car Training",
+    badge: "Most Popular",
+    details: [
+      ["Total Training Distance", "120 km on-road"],
+      ["Daily Distance", "Approx. 8 km per day"],
+      ["Course Duration", "15 days"],
+      ["Batches", "Morning 6 AM–12 PM · Evening 3 PM–8 PM"],
+      ["Practice Type", "Manual driving practice every day"],
+      ["Final Day", "Technical session + reverse gear practice"],
+      ["RTO Support", "Exam guidance included"],
+    ],
+  },
+  {
+    title: "2 + 4 Wheeler Combo",
+    badge: "Best Value",
+    details: [
+      ["Includes", "Two-wheeler + four-wheeler training"],
+      ["Course Duration", "On enquiry"],
+      ["Batches", "Morning 6 AM–12 PM · Evening 3 PM–8 PM"],
+      ["Licenses", "Support for both two & four wheeler"],
+      ["RTO Support", "Full guidance for both"],
+    ],
+  },
+];
+
+const enrollmentPolicy = [
+  "One student per enrollment — not transferable to another person.",
+  "Choose a morning (6 AM–12 PM) or evening (3 PM–8 PM) batch.",
+  "Training conducted on real roads under expert supervision.",
+  "Instruction available in Hindi and Marathi.",
+  "RTO license exam paperwork and test preparation included.",
+];
 
 const services = [
   "Professional Trainers",
@@ -38,7 +84,7 @@ export default function CoursesPage() {
       {/* Page header */}
       <section className="bg-surface border-b border-[#e5e5e5] px-6 py-10 md:py-14">
         <div className="mx-auto max-w-6xl">
-          <p className="font-body text-xs font-semibold tracking-widest text-[#3a6b35] uppercase mb-2">
+          <p className="font-body text-xs font-semibold tracking-widest text-[#0f3d3a] uppercase mb-2">
             What We Offer
           </p>
           <h1 className="font-heading text-3xl md:text-5xl font-bold uppercase tracking-wide">
@@ -47,90 +93,93 @@ export default function CoursesPage() {
         </div>
       </section>
 
-      {/* Course card */}
-      <section className="bg-white border-b border-[#e5e5e5] px-6 py-12 md:py-20" aria-label="4-Wheeler Car Training course details">
+      {/* Course cards */}
+      <section className="bg-white border-b border-[#e5e5e5] px-6 py-12 md:py-20" aria-label="Driving course details">
         <div className="mx-auto max-w-6xl">
           <FadeIn>
-            <p className="font-body text-xs font-semibold tracking-widest text-[#3a6b35] uppercase mb-3 text-center">
-              Our Program
+            <p className="font-body text-xs font-semibold tracking-widest text-[#0f3d3a] uppercase mb-3 text-center">
+              Our Programs
             </p>
             <h2 className="font-heading text-2xl md:text-3xl uppercase tracking-wide mb-8 text-center">
-              4-Wheeler (Car) Training
+              Choose Your Course
             </h2>
           </FadeIn>
 
-          <FadeIn delay={80}>
-            <div
-              className="rounded-md bg-white border border-border p-6 md:p-8"
-              style={{ borderTop: "3px solid #3a6b35", boxShadow: "0 2px 8px rgba(0,0,0,0.06)" }}
-            >
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                {/* Course details */}
-                <div>
-                  <h3 className="font-heading text-lg uppercase tracking-wide mb-4 border-b border-border pb-2">
-                    Course Details
-                  </h3>
-                  <ul className="space-y-3">
-                    {[
-                      ["Total Training Distance", "120 km on-road"],
-                      ["Daily Distance", "Approx. 8 km per day"],
-                      ["Course Duration", "15 days"],
-                      ["Timings", "5:00 AM – 9:00 PM (choose your slot)"],
-                      ["Practice Type", "Manual driving practice every day"],
-                      ["Final Day", "Special technical session + reverse gear practice"],
-                      ["RTO Support", "Exam guidance included"],
-                    ].map(([label, value]) => (
-                      <li key={label} className="flex flex-col sm:flex-row sm:items-start gap-1 sm:gap-3">
-                        <span className="font-body text-sm font-semibold text-ink shrink-0 sm:min-w-[180px]">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+            {courses.map((course, i) => (
+              <FadeIn key={course.title} delay={i * 80}>
+                <div
+                  className="h-full flex flex-col rounded-md bg-white border border-border p-6"
+                  style={{ borderTop: "3px solid #0f3d3a", boxShadow: "0 2px 8px rgba(0,0,0,0.06)" }}
+                >
+                  <div className="flex items-start justify-between gap-3 mb-4 pb-3 border-b border-border">
+                    <h3 className="font-heading text-lg uppercase tracking-wide">
+                      {course.title}
+                    </h3>
+                    <span className="shrink-0 rounded-md bg-accent/10 border border-accent/30 px-2 py-0.5 font-body text-xs text-accent font-semibold">
+                      {course.badge}
+                    </span>
+                  </div>
+                  <ul className="space-y-3 mb-6 flex-1">
+                    {course.details.map(([label, value]) => (
+                      <li key={label} className="flex flex-col gap-0.5">
+                        <span className="font-body text-xs font-semibold text-ink uppercase tracking-wide">
                           {label}
                         </span>
                         <span className="font-body text-sm text-body-text">{value}</span>
                       </li>
                     ))}
                   </ul>
-                </div>
-
-                {/* Policies */}
-                <div>
-                  <h3 className="font-heading text-lg uppercase tracking-wide mb-4 border-b border-border pb-2">
-                    Enrollment Policy
-                  </h3>
-                  <ul className="space-y-3 mb-6">
-                    {[
-                      "Fee is non-refundable once paid.",
-                      "One student per enrollment — not transferable to another person.",
-                      "Choose any time slot between 5:00 AM and 9:00 PM.",
-                      "Training conducted on real roads under expert supervision.",
-                      "RTO license exam paperwork and test preparation included.",
-                    ].map((point) => (
-                      <li key={point} className="flex items-start gap-2 font-body text-sm text-body-text">
-                        <span className="text-[#3a6b35] mt-0.5 shrink-0 font-bold">→</span>
-                        {point}
-                      </li>
-                    ))}
-                  </ul>
-
                   <a
                     href={WHATSAPP_URL}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="btn-primary inline-flex items-center gap-2 rounded-md bg-[#3a6b35] px-6 py-3 font-heading text-sm font-semibold text-white tracking-wide hover:bg-[#2d5229]"
+                    className="btn-primary inline-flex items-center justify-center gap-2 rounded-md bg-[#0f3d3a] px-5 py-2.5 font-heading text-sm font-semibold text-white tracking-wide hover:bg-[#0a2c2a]"
                   >
                     <WaIcon />
                     Book via WhatsApp
                   </a>
                 </div>
-              </div>
+              </FadeIn>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Enrollment policy */}
+      <section className="bg-surface border-b border-[#e5e5e5] px-6 py-12 md:py-20" aria-label="Enrollment policy">
+        <div className="mx-auto max-w-3xl">
+          <FadeIn>
+            <p className="font-body text-xs font-semibold tracking-widest text-[#0f3d3a] uppercase mb-3 text-center">
+              Good to Know
+            </p>
+            <h2 className="font-heading text-2xl md:text-3xl uppercase tracking-wide mb-8 text-center">
+              Enrollment Policy
+            </h2>
+          </FadeIn>
+          <FadeIn delay={80}>
+            <div
+              className="rounded-md bg-white border border-border p-6 md:p-8"
+              style={{ borderTop: "3px solid #0f3d3a", boxShadow: "0 2px 8px rgba(0,0,0,0.06)" }}
+            >
+              <ul className="space-y-3">
+                {enrollmentPolicy.map((point) => (
+                  <li key={point} className="flex items-start gap-2 font-body text-sm text-body-text">
+                    <span className="text-[#0f3d3a] mt-0.5 shrink-0 font-bold">→</span>
+                    {point}
+                  </li>
+                ))}
+              </ul>
             </div>
           </FadeIn>
         </div>
       </section>
 
       {/* Services offered */}
-      <section className="bg-surface px-6 py-12 md:py-20" aria-label="Services offered">
+      <section className="bg-white px-6 py-12 md:py-20" aria-label="Services offered">
         <div className="mx-auto max-w-6xl">
           <FadeIn>
-            <p className="font-body text-xs font-semibold tracking-widest text-[#3a6b35] uppercase mb-3 text-center">
+            <p className="font-body text-xs font-semibold tracking-widest text-[#0f3d3a] uppercase mb-3 text-center">
               Beyond Training
             </p>
             <h2 className="font-heading text-2xl md:text-3xl uppercase tracking-wide mb-8 text-center">
@@ -142,7 +191,7 @@ export default function CoursesPage() {
               <FadeIn key={service} delay={i * 60}>
                 <div
                   className="rounded-md bg-white border border-border px-5 py-4 flex items-center gap-3 card-hover"
-                  style={{ borderTop: "3px solid #3a6b35", boxShadow: "0 2px 8px rgba(0,0,0,0.06)" }}
+                  style={{ borderTop: "3px solid #0f3d3a", boxShadow: "0 2px 8px rgba(0,0,0,0.06)" }}
                 >
                   <span className="h-2 w-2 rounded-sm bg-accent shrink-0" aria-hidden="true" />
                   <span className="font-body text-sm text-ink font-medium">{service}</span>

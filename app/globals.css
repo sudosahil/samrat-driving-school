@@ -1,18 +1,28 @@
 @import "tailwindcss";
 
 @theme {
-  --color-accent: #e8a020;
-  --color-green: #3a6b35;
-  --color-green-dark: #2d5229;
-  --color-surface: #f8f8f8;
-  --color-ink: #1a1a1a;
-  --color-body-text: #444444;
-  --color-muted: #888888;
-  --color-border: #eeeeee;
-  --color-divider: #e5e5e5;
-  --color-form-border: #dddddd;
-  --shadow-card: 0 2px 8px rgba(0, 0, 0, 0.06);
-  --shadow-card-hover: 0 8px 24px rgba(0, 0, 0, 0.12);
+  /* ── Brand palette (from the Samrat logo) ── */
+  --color-teal: #0f3d3a;        /* deep teal — primary actions, headings accent */
+  --color-teal-dark: #0a2c2a;   /* hover / pressed */
+  --color-teal-deep: #0b2624;   /* dark section background */
+  --color-gold: #c6a23c;        /* gold accent */
+  --color-gold-soft: #e3c570;   /* gold on dark backgrounds */
+  --color-cream: #f6efdd;       /* cream text on dark */
+  --color-red: #cf2026;         /* "the name of perfection" accent */
+
+  --color-accent: #c6a23c;
+  --color-surface: #f7f5ef;
+  --color-ink: #16211f;
+  --color-body-text: #4a5654;
+  --color-muted: #8a938f;
+  --color-border: #ebe6d8;
+  --color-divider: #e6e1d3;
+  --color-form-border: #d9d3c4;
+
+  --shadow-card: 0 2px 10px rgba(11, 38, 36, 0.07);
+  --shadow-card-hover: 0 14px 34px rgba(11, 38, 36, 0.16);
+  --shadow-gold: 0 8px 24px rgba(198, 162, 60, 0.28);
+
   --font-body: var(--font-poppins);
   --font-heading: var(--font-oswald);
 }
@@ -24,14 +34,16 @@
 }
 
 html {
-  scroll-behavior: auto;
+  scroll-behavior: smooth;
 }
 
 body {
   background-color: #ffffff;
-  color: #444444;
+  color: #4a5654;
   font-family: var(--font-body), sans-serif;
   -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
 }
 
 @layer base {
@@ -43,17 +55,16 @@ body {
   h6 {
     font-family: var(--font-heading), sans-serif;
     letter-spacing: 0.02em;
-    color: #1a1a1a;
+    color: #16211f;
   }
 }
 
-/* ─── Fade-in-up (Intersection Observer) ─── */
+/* ─── CSS-only fade fallback (framer-motion handles the real reveals) ─── */
 .fade-up {
   opacity: 0;
   transform: translateY(24px);
   transition: opacity 0.5s ease-out, transform 0.5s ease-out;
 }
-
 .fade-up.animate-visible {
   opacity: 1;
   transform: translateY(0);
@@ -61,9 +72,8 @@ body {
 
 /* ─── Card hover lift ─── */
 .card-hover {
-  transition: transform 200ms ease, box-shadow 200ms ease;
+  transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
 }
-
 .card-hover:hover {
   transform: translateY(-4px);
   box-shadow: var(--shadow-card-hover);
@@ -73,7 +83,6 @@ body {
 .nav-underline {
   position: relative;
 }
-
 .nav-underline::after {
   content: "";
   position: absolute;
@@ -81,16 +90,82 @@ body {
   left: 0;
   width: 0;
   height: 2px;
-  background-color: #3a6b35;
+  background-color: var(--color-gold);
   transition: width 200ms ease;
 }
-
 .nav-underline:hover::after,
 .nav-underline.nav-active::after {
   width: 100%;
 }
 
-/* ─── Button hover ─── */
 .btn-primary {
-  transition: background-color 200ms ease, color 200ms ease;
+  transition: background-color 200ms ease, color 200ms ease, box-shadow 200ms ease, transform 120ms ease;
+}
+.btn-primary:active {
+  transform: scale(0.98);
+}
+
+/* ─── Warm dot-grid backgrounds ─── */
+.bg-dots {
+  background-color: #ffffff;
+  background-image: radial-gradient(circle, rgba(15, 61, 58, 0.05) 1px, transparent 1px);
+  background-size: 22px 22px;
+}
+.bg-dots-surface {
+  background-color: #f7f5ef;
+  background-image: radial-gradient(circle, rgba(15, 61, 58, 0.045) 1px, transparent 1px);
+  background-size: 22px 22px;
+}
+
+/* ─── Dark teal brand section (matches the logo background) ─── */
+.brand-dark {
+  background-color: #0b2624;
+  background-image:
+    radial-gradient(ellipse 60% 55% at 85% 12%, rgba(198, 162, 60, 0.16) 0%, transparent 60%),
+    radial-gradient(ellipse 50% 50% at 10% 95%, rgba(198, 162, 60, 0.10) 0%, transparent 60%),
+    radial-gradient(circle, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+  background-size: auto, auto, 26px 26px;
+}
+
+/* ─── Gold hairline divider ─── */
+.gold-rule {
+  height: 3px;
+  width: 64px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--color-gold), var(--color-gold-soft));
+}
+
+/* ─── Light hero with brand blobs ─── */
+.hero-bg {
+  background-color: #ffffff;
+  background-image:
+    radial-gradient(ellipse 55% 50% at 90% 55%, rgba(198, 162, 60, 0.10) 0%, transparent 70%),
+    radial-gradient(ellipse 40% 55% at 8% 25%, rgba(15, 61, 58, 0.07) 0%, transparent 65%),
+    radial-gradient(circle, rgba(15, 61, 58, 0.05) 1px, transparent 1px);
+  background-size: auto, auto, 22px 22px;
+}
+
+/* ─── Indian flag tricolor backdrop (kept for accents) ─── */
+.india-flag-backdrop {
+  background:
+    linear-gradient(rgba(11, 38, 36, 0.82), rgba(11, 38, 36, 0.82)),
+    linear-gradient(
+      to bottom,
+      #FF9933 0%, #FF9933 33.33%,
+      #F5F5F5 33.33%, #F5F5F5 66.66%,
+      #138808 66.66%, #138808 100%
+    );
+}
+
+/* ─── Soft gold shine on the brand badge ─── */
+@keyframes floaty {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+.animate-floaty {
+  animation: floaty 5s ease-in-out infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  .animate-floaty { animation: none; }
+  html { scroll-behavior: auto; }
 }

@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Contact Us — Samrat Motor Driving School Aurangabad",
   description:
-    "Contact Samrat Motor Driving School in Chhatrapati Sambhajinagar. Call 9422264916, visit Garkheda or enquire via WhatsApp. Open Monday–Saturday, 5AM–9PM.",
+    "Contact Samrat Motor Driving School in Chhatrapati Sambhajinagar. Call 9422264916, WhatsApp 7499862746, or visit Garkheda. Monday–Saturday, morning & evening batches.",
   openGraph: {
     title: "Contact Samrat Motor Driving School — Chhatrapati Sambhajinagar",
     description:

@@ -2,7 +2,7 @@
 
 import { useState, type FormEvent } from "react";
 
-const PHONE = "919422264916";
+const WHATSAPP = "917499862746";
 
 const MAP_SRC =
   "https://www.google.com/maps?q=Samrat+Motor+Driving+School,+53+Jay+Vishw+Bharti+Colony,+Chetak+Ghoda+Chowk,+Garkheda+Rd,+Kasliwal+Nagar,+Aurangabad,+Maharashtra+431005&output=embed";
@@ -29,18 +29,18 @@ export default function ContactPage() {
     ]
       .filter(Boolean)
       .join(" ");
-    window.open(`https://wa.me/${PHONE}?text=${encodeURIComponent(text)}`, "_blank", "noopener,noreferrer");
+    window.open(`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(text)}`, "_blank", "noopener,noreferrer");
   }
 
   const inputClass =
-    "w-full rounded-md bg-white border border-form-border px-4 py-2.5 font-body text-sm text-ink placeholder-[#aaaaaa] focus:outline-none focus:border-[#3a6b35] transition-colors";
+    "w-full rounded-md bg-white border border-form-border px-4 py-2.5 font-body text-sm text-ink placeholder-[#aaaaaa] focus:outline-none focus:border-[#0f3d3a] transition-colors";
 
   return (
     <>
       {/* Page header */}
       <section className="bg-surface border-b border-[#e5e5e5] px-6 py-10 md:py-14">
         <div className="mx-auto max-w-6xl">
-          <p className="font-body text-xs font-semibold tracking-widest text-[#3a6b35] uppercase mb-2">
+          <p className="font-body text-xs font-semibold tracking-widest text-[#0f3d3a] uppercase mb-2">
             Get In Touch
           </p>
           <h1 className="font-heading text-3xl md:text-5xl font-bold uppercase tracking-wide">
@@ -55,7 +55,7 @@ export default function ContactPage() {
             {/* Contact info + map */}
             <div className="space-y-8">
               <div>
-                <p className="font-body text-xs font-semibold tracking-widest text-[#3a6b35] uppercase mb-2">
+                <p className="font-body text-xs font-semibold tracking-widest text-[#0f3d3a] uppercase mb-2">
                   Our Location
                 </p>
                 <h2 className="font-heading text-xl uppercase tracking-wide mb-4">
@@ -63,7 +63,7 @@ export default function ContactPage() {
                 </h2>
                 <address
                   className="not-italic font-body text-sm text-body-text space-y-3 rounded-md bg-white border border-border p-5"
-                  style={{ borderTop: "3px solid #3a6b35", boxShadow: "0 2px 8px rgba(0,0,0,0.06)" }}
+                  style={{ borderTop: "3px solid #0f3d3a", boxShadow: "0 2px 8px rgba(0,0,0,0.06)" }}
                 >
                   <div>
                     <p className="text-ink font-semibold text-xs uppercase tracking-wide mb-1">
@@ -80,18 +80,33 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <p className="text-ink font-semibold text-xs uppercase tracking-wide mb-1">
-                      Phone
+                      Phone (Enquiries)
                     </p>
-                    <a href="tel:+919422264916" className="hover:text-[#3a6b35] transition-colors">
+                    <a href="tel:+919422264916" className="hover:text-[#0f3d3a] transition-colors">
                       +91 94222 64916
                     </a>
                   </div>
                   <div>
                     <p className="text-ink font-semibold text-xs uppercase tracking-wide mb-1">
-                      Timings
+                      WhatsApp
                     </p>
-                    <p>5:00 AM – 9:00 PM</p>
-                    <p className="text-muted text-xs mt-0.5">Monday to Saturday</p>
+                    <a href="https://wa.me/917499862746" target="_blank" rel="noopener noreferrer" className="hover:text-[#0f3d3a] transition-colors">
+                      +91 74998 62746
+                    </a>
+                  </div>
+                  <div>
+                    <p className="text-ink font-semibold text-xs uppercase tracking-wide mb-1">
+                      Batch Timings
+                    </p>
+                    <p>Morning: 6:00 AM – 12:00 PM</p>
+                    <p>Evening: 3:00 PM – 8:00 PM</p>
+                    <p className="text-muted text-xs mt-1">Office: 6:00 PM – 8:00 PM &middot; Monday to Saturday</p>
+                  </div>
+                  <div>
+                    <p className="text-ink font-semibold text-xs uppercase tracking-wide mb-1">
+                      Languages
+                    </p>
+                    <p>Hindi &amp; Marathi</p>
                   </div>
                 </address>
               </div>
@@ -118,7 +133,7 @@ export default function ContactPage() {
 
             {/* Enquiry form */}
             <div>
-              <p className="font-body text-xs font-semibold tracking-widest text-[#3a6b35] uppercase mb-2">
+              <p className="font-body text-xs font-semibold tracking-widest text-[#0f3d3a] uppercase mb-2">
                 Quick Enquiry
               </p>
               <h2 className="font-heading text-xl uppercase tracking-wide mb-4">
@@ -127,7 +142,7 @@ export default function ContactPage() {
               <form
                 onSubmit={handleSubmit}
                 className="rounded-md bg-white border border-border p-6 space-y-5"
-                style={{ borderTop: "3px solid #3a6b35", boxShadow: "0 2px 8px rgba(0,0,0,0.06)" }}
+                style={{ borderTop: "3px solid #0f3d3a", boxShadow: "0 2px 8px rgba(0,0,0,0.06)" }}
                 noValidate
               >
                 <div>
@@ -163,7 +178,9 @@ export default function ContactPage() {
                     onChange={(e: React.ChangeEvent<HTMLSelectElement>) => setCourse(e.target.value)}
                     className={inputClass}
                   >
+                    <option value="2-Wheeler Training">2-Wheeler Training</option>
                     <option value="4-Wheeler Car Training">4-Wheeler Car Training</option>
+                    <option value="2 + 4 Wheeler Combo">2 + 4 Wheeler Combo</option>
                   </select>
                 </div>
 
@@ -182,7 +199,7 @@ export default function ContactPage() {
 
                 <button
                   type="submit"
-                  className="btn-primary w-full flex items-center justify-center gap-2 rounded-md bg-[#3a6b35] px-6 py-3 font-heading text-sm font-semibold text-white tracking-wide hover:bg-[#2d5229]"
+                  className="btn-primary w-full flex items-center justify-center gap-2 rounded-md bg-[#0f3d3a] px-6 py-3 font-heading text-sm font-semibold text-white tracking-wide hover:bg-[#0a2c2a]"
                 >
                   <WaIcon />
                   Send via WhatsApp

@@ -1,6 +1,6 @@
 import FadeIn from "@/components/FadeIn";
 
-const AVATAR_COLORS = ["#1a1a1a", "#e8a020", "#444444"];
+const AVATAR_COLORS = ["#1a1a1a", "#c6a23c", "#444444"];
 
 const reviews = [
   {
@@ -97,7 +97,7 @@ export default function Testimonials() {
             <FadeIn key={review.name} delay={i * 70}>
               <article
                 className="rounded-md bg-white border border-border p-5 flex flex-col gap-3 card-hover h-full"
-                style={{ borderTop: "3px solid #3a6b35", boxShadow: "0 2px 8px rgba(0,0,0,0.06)" }}
+                style={{ borderTop: "3px solid #0f3d3a", boxShadow: "0 2px 8px rgba(0,0,0,0.06)" }}
               >
                 {/* Reviewer info */}
                 <div className="flex items-center gap-3">

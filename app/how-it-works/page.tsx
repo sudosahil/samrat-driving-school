@@ -26,7 +26,7 @@ const steps = [
     number: "02",
     title: "Training Begins",
     description:
-      "Daily sessions with experienced, patient instructors on real roads. Approx. 8 km per day, 15 days total. You choose your preferred time slot between 5 AM and 9 PM.",
+      "Daily sessions with experienced, patient instructors on real roads, taught in Hindi and Marathi. For the 4-wheeler course that's approx. 8 km per day over 15 days. Pick a morning (6 AM–12 PM) or evening (3 PM–8 PM) batch.",
   },
   {
     number: "03",
@@ -38,12 +38,12 @@ const steps = [
     number: "04",
     title: "Get Your License",
     description:
-      "Drive confidently with your official government-issued license. By the end of 15 days, you'll have the skill and the paperwork to get on the road legally.",
+      "Drive confidently with your official government-issued license. By the end of your course, you'll have the skill and the paperwork to get on the road legally.",
   },
 ];
 
 const WHATSAPP_URL =
-  "https://wa.me/919422264916?text=Hi%2C%20I%27m%20interested%20in%20joining%20Samrat%20Motor%20Driving%20School";
+  "https://wa.me/917499862746?text=Hi%2C%20I%27m%20interested%20in%20joining%20Samrat%20Motor%20Driving%20School";
 
 export default function HowItWorksPage() {
   return (
@@ -51,7 +51,7 @@ export default function HowItWorksPage() {
       {/* Page header */}
       <section className="bg-surface border-b border-[#e5e5e5] px-6 py-10 md:py-14">
         <div className="mx-auto max-w-6xl">
-          <p className="font-body text-xs font-semibold tracking-widest text-[#3a6b35] uppercase mb-2">
+          <p className="font-body text-xs font-semibold tracking-widest text-[#0f3d3a] uppercase mb-2">
             The Process
           </p>
           <h1 className="font-heading text-3xl md:text-5xl font-bold uppercase tracking-wide">
@@ -77,14 +77,14 @@ export default function HowItWorksPage() {
                 <li className="flex gap-5 md:gap-8">
                   {/* Number column */}
                   <div className="flex flex-col items-center">
-                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-md bg-[#3a6b35]">
+                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-md bg-[#0f3d3a]">
                       <span className="font-heading text-base font-bold text-white">
                         {step.number}
                       </span>
                     </div>
                     {index < steps.length - 1 && (
                       <div
-                        className="mt-2 w-0.5 flex-1 min-h-[40px] bg-[#3a6b35]/20"
+                        className="mt-2 w-0.5 flex-1 min-h-[40px] bg-[#0f3d3a]/20"
                         aria-hidden="true"
                       />
                     )}
@@ -112,29 +112,29 @@ export default function HowItWorksPage() {
           <FadeIn delay={200}>
             <div
               className="rounded-md bg-white border border-border p-8 text-center max-w-2xl mx-auto"
-              style={{ borderTop: "3px solid #3a6b35", boxShadow: "0 2px 8px rgba(0,0,0,0.06)" }}
+              style={{ borderTop: "3px solid #0f3d3a", boxShadow: "0 2px 8px rgba(0,0,0,0.06)" }}
             >
-              <p className="font-body text-xs font-semibold tracking-widest text-[#3a6b35] uppercase mb-2">
+              <p className="font-body text-xs font-semibold tracking-widest text-[#0f3d3a] uppercase mb-2">
                 Get Started
               </p>
               <h2 className="font-heading text-xl uppercase tracking-wide mb-2">
                 Ready to Start?
               </h2>
               <p className="font-body text-sm text-body-text mb-6">
-                Enroll today and be on the road within 15 days.
+                Enroll today and start your two-wheeler or four-wheeler training.
               </p>
               <div className="flex flex-col sm:flex-row gap-3 justify-center">
                 <a
                   href={WHATSAPP_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn-primary inline-flex items-center justify-center gap-2 rounded-md bg-[#3a6b35] px-6 py-3 font-heading text-sm font-semibold text-white tracking-wide hover:bg-[#2d5229]"
+                  className="btn-primary inline-flex items-center justify-center gap-2 rounded-md bg-[#0f3d3a] px-6 py-3 font-heading text-sm font-semibold text-white tracking-wide hover:bg-[#0a2c2a]"
                 >
                   Enquire on WhatsApp
                 </a>
                 <Link
                   href="/contact"
-                  className="btn-primary inline-flex items-center justify-center rounded-md border border-[#3a6b35] px-6 py-3 font-heading text-sm font-semibold text-[#3a6b35] hover:bg-[#3a6b35] hover:text-white tracking-wide transition-colors"
+                  className="btn-primary inline-flex items-center justify-center rounded-md border border-[#0f3d3a] px-6 py-3 font-heading text-sm font-semibold text-[#0f3d3a] hover:bg-[#0f3d3a] hover:text-white tracking-wide transition-colors"
                 >
                   Contact Us
                 </Link>

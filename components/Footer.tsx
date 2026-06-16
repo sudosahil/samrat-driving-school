@@ -17,11 +17,11 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <Image
-              src="/images/logo.png"
+              src="/images/bottom.jpeg"
               alt="Samrat Motor Driving School"
-              width={200}
-              height={56}
-              className="h-12 w-auto object-contain brightness-110"
+              width={1600}
+              height={1600}
+              className="h-28 w-auto object-contain rounded-md"
             />
             <p className="font-body text-xs text-white/40 mt-4">
               Est. 2000 &bull; Chhatrapati Sambhajinagar
@@ -38,7 +38,7 @@ export default function Footer() {
                 <li key={href}>
                   <Link
                     href={href}
-                    className="font-body text-sm text-white/65 hover:text-[#3a6b35] transition-colors"
+                    className="font-body text-sm text-white/65 hover:text-[#0f3d3a] transition-colors"
                   >
                     {label}
                   </Link>
@@ -60,18 +60,29 @@ export default function Footer() {
               </p>
               <p className="text-white/40 text-xs">Infront of SBI Bank</p>
               <p>
-                <a href="tel:+919422264916" className="hover:text-[#3a6b35] transition-colors">
+                Enquiries:{" "}
+                <a href="tel:+919422264916" className="hover:text-[#0f3d3a] transition-colors">
                   +91 94222 64916
                 </a>
               </p>
-              <p>Mon – Sat &nbsp;|&nbsp; 5:00 AM – 9:00 PM</p>
+              <p>
+                WhatsApp:{" "}
+                <a href="https://wa.me/917499862746" target="_blank" rel="noopener noreferrer" className="hover:text-[#0f3d3a] transition-colors">
+                  +91 74998 62746
+                </a>
+              </p>
+              <p>Mon – Sat</p>
+              <p className="text-white/40 text-xs">
+                Morning 6 AM–12 PM &middot; Evening 3 PM–8 PM
+              </p>
+              <p className="text-white/40 text-xs">Instruction in Hindi &amp; Marathi</p>
             </address>
           </div>
         </div>
 
         <div className="mt-10 border-t border-white/10 pt-6 text-center">
           <p className="font-body text-xs text-white/35">
-            &copy; 2025 Samrat Motor Driving School. All rights reserved.
+            &copy; 2026 Samrat Motor Driving School. All rights reserved.
           </p>
         </div>
       </div>

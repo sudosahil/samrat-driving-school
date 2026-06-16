@@ -26,10 +26,10 @@ export default function Navbar() {
         {/* Logo */}
         <Link href="/" onClick={() => setOpen(false)} aria-label="Samrat Motor Driving School home">
           <Image
-            src="/images/logo.png"
+            src="/images/long.jpeg"
             alt="Samrat Motor Driving School"
-            width={220}
-            height={56}
+            width={1600}
+            height={767}
             className="h-11 md:h-14 w-auto object-contain"
             priority
           />
@@ -45,8 +45,8 @@ export default function Navbar() {
                   href={href}
                   className={`nav-underline font-body text-sm font-medium pb-0.5 transition-colors ${
                     isActive
-                      ? "text-[#3a6b35] nav-active"
-                      : "text-ink hover:text-[#3a6b35]"
+                      ? "text-[#0f3d3a] nav-active"
+                      : "text-ink hover:text-[#0f3d3a]"
                   }`}
                 >
                   {label}
@@ -81,8 +81,8 @@ export default function Navbar() {
                     href={href}
                     className={`block px-6 py-3 font-body text-sm font-medium border-b border-[#f0f0f0] transition-colors ${
                       isActive
-                        ? "text-[#3a6b35] font-semibold bg-[#3a6b35]/5"
-                        : "text-ink hover:text-[#3a6b35] hover:bg-[#3a6b35]/5"
+                        ? "text-[#0f3d3a] font-semibold bg-[#0f3d3a]/5"
+                        : "text-ink hover:text-[#0f3d3a] hover:bg-[#0f3d3a]/5"
                     }`}
                     onClick={() => setOpen(false)}
                   >
